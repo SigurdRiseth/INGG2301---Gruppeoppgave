@@ -1,0 +1,59 @@
+% --- General ---
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{float}
+\usepackage[version=4]{mhchem}
+\usepackage{pdfpages}
+\usepackage{microtype}
+
+\RequirePackage[T1]{fontenc}                % modern font encoding
+\RequirePackage[charter, cal=cmcal]{mathdesign} % main font with math support
+\RequirePackage[scaled=.88]{berasans}       % sans serif font
+\RequirePackage[scaled=.82]{DejaVuSansMono} % monospace font (for code)
+\RequirePackage[                            % subfigures with captions within figures
+    font=small,                             % and customisation of captions
+    labelfont=bf,
+    margin=\parindent
+]{caption}
+
+% --- Language ---
+\usepackage[norsk]{babel}
+
+% --- Typography ---
+\usepackage[skip=10pt plus1pt, indent=20pt]{parskip}
+
+% --- Bibliography ---
+\usepackage{csquotes}
+\usepackage[
+    backend=biber,
+    style=ieee,
+    urldate=long,
+    maxcitenames=2
+]{biblatex}
+\addbibresource{references.bib}
+\DeclareLanguageMapping{norsk}{norsk-apa}
+
+% --- Hyperlinks ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    citecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+    filecolor=black
+}
+
+% --- Better cross referencing ---
+\usepackage{cleveref}
+\crefname{table}{Tabell}{Tabeller}
+\crefname{figure}{Figur}{Figurer}
+\crefname{section}{Del}{Deler}
+
+\usepackage{tcolorbox}
+
+\usepackage{tabularx}
+\usepackage{booktabs} % penere linjer (valgfritt)
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, backgrounds}
+\usetikzlibrary{3d,perspective}

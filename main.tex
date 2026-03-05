@@ -1,0 +1,61 @@
+\documentclass{article}
+
+% Importing document settings from our file "packages.sty"
+\usepackage{packages}
+\pagenumbering{roman} % Start with Roman numerals
+
+% --- Definer forside ---
+\title{
+    \large INGG2301 -- Ingeniørfaglig systemtenkning \\[0.5em]
+    \Large Autonom dronebasert tilstandsovervåking av jernbaneinfrastruktur \\[0.5em]
+    \large Prosjektoppgave
+}
+\author{
+    \textbf{Gjøvik 28:} \\
+    Elias Fagerbakken Heier \\
+    Theodor Sjetnan Utvik \\
+    Marcus Minge Wisnes \\
+    Halvard Nordberg \\
+    Sigurd Riseth
+}
+\date{\today}
+
+% --- Start dokument ---
+\begin{document}
+
+% --- Forside og sammendrag ---
+\maketitle
+\input{sections/00-abstract}
+\newpage
+
+% --- Innholdsfortegnelse, figurliste, og tabelliste ---
+\tableofcontents
+\newpage
+
+\listoffigures
+\newpage
+
+\listoftables
+\newpage
+
+\pagenumbering{arabic}   % Switch to Arabic numerals (1, 2, 3, ...)
+\setcounter{page}{1}     % Start page numbering from 1
+
+% --- Hovedinnhold med importerte seksjoner ---
+\include{sections/01-problembeskrivelse}
+\include{sections/02-mulighetsanalyse}
+\include{sections/03-miljøanalyse}
+\include{sections/04-diskusjon}
+
+% --- Litteraturliste ---
+\newpage
+\printbibliography[heading = bibintoc, title = Litteraturliste]
+
+% --- Vedlegg ---
+\newpage
+\appendix
+\include{vedlegg/kotaktlogg}
+\include{vedlegg/driftsbudsjett}
+\include{vedlegg/beregninger}
+
+\end{document}
