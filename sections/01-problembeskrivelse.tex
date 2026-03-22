@@ -34,17 +34,15 @@ Konsekvensene av utilstrekkelig vedlikehold er målbare. Feil på infrastrukture
 
 \subsubsection{Dagens praksis og dens begrensninger}
 
-Dagens tilstandskontroll er i stor grad basert på periodiske, manuelle inspeksjoner utført av personell, supplert med operatørstyrte droner i vanskelig tilgjengelige områder \parencite{johannesen_bane_2021}. Disse metodene er ressurskrevende, avhengige av personelltilgjengelighet og innebærer fysisk tilstedeværelse i og nær sporet -- et risikofylt arbeidsmiljø. Planlagte, periodiske inspeksjoner gir dessuten begrenset innsikt i den løpende tilstandsutviklingen: skader som oppstår mellom befaringene kan forbli uoppdaget frem til neste planlagte gjennomgang.
+Bane NOR opererer med to parallelle inspeksjonsspor for jernbanebroer: årlige driftskontroller med begrenset dokumentasjonskrav og grundige ingeniørkontroller hvert sjette år (\cref{kontakt:traetten}). Menneskebetjente droner brukes allerede til bildedokumentasjon ved ingeniørkontroller av broer og høye fjellskjæringer, men krever at en operatør transporteres til stedet for hver gjennomgang (\cref{kontakt:traetten}). For spormåling benyttes i tillegg målevognen Roger 1000 (\cref{kontakt:lau}). Den største operative utfordringen er sportilgang: strenge sikkerhetsregler krever togfrie perioder, som presser inspeksjoner til nattarbeid og begrenser hva som faktisk gjennomføres innenfor et år (\cref{kontakt:traetten}). Den viktigste svakheten i dagens regime er imidlertid ikke datainnsamlingen, men dataanalysen -- innsamlede data sammenlignes fortsatt i stor grad manuelt mot grenseverdier, uten systematisk utnyttelse av historiske trender (\cref{kontakt:lau}).
 
 Problemet kan dekomponeres i tre delproblem:
 
 \begin{enumerate}
-    \item \textbf{Lav inspeksjonsfrekvens.} Periodiske befaringer kan ikke fange opp tilstandsforringelse som oppstår mellom planlagte gjennomganger.
-    \item \textbf{Personellrisiko.} Manuell inspeksjon i og nær spor og på høye broer medfører HMS-risiko for inspeksjonspersonell.
-    \item \textbf{Reaktivt vedlikehold.} Mangel på kontinuerlige tilstandsdata gjør det vanskelig å drive prediktivt vedlikehold; tiltak iverksettes typisk reaktivt etter at avvik allerede har oppstått.
+    \item \textbf{Lav inspeksjonsfrekvens.} Inspeksjonsintervallet er fast, ikke tilstandsbasert, slik at tilstandsforringelse som oppstår mellom planlagte gjennomganger kan forbli uoppdaget. Eldre infrastruktur kan feile uten forvarsel (\cref{kontakt:traetten}).
+    \item \textbf{Personellrisiko.} Manuell inspeksjon i og nær spor og på høye broer medfører HMS-risiko. Krav til sikkerhetsvakter begrenser i tillegg effektiv utnyttelse av tilgjengelig inspeksjonstid (\cref{kontakt:traetten}).
+    \item \textbf{Reaktivt vedlikehold.} Mangel på kontinuerlige tilstandsdata og automatisert analyse gjør det vanskelig å drive prediktivt vedlikehold. AI-drevet analyse trekkes frem som det største enkeltforbedringspotesialet i dagens inspeksjonsregime (\cref{kontakt:lau}).
 \end{enumerate}
-
-Denne forståelsen av problemet er bekreftet gjennom innledende dialog med fagpersoner med tilknytning til norsk jernbanevirksomhet, som peker på at manglende kontinuerlig tilstandsdata er en av de største barrierene for å gå fra reaktivt til prediktivt vedlikehold.
 
 \subsection{Teknologisk konsept}
 
@@ -66,7 +64,9 @@ Det foreslåtte konseptet er et autonomt dronesystem for kontinuerlig tilstandso
     \label{fig:system_overview}
 \end{figure}
 
-Konseptet har tydelige paralleller til pågående initiativ internasjonalt. I Spania har luftfartsmyndigheten AESA gitt selskapet Ineco tillatelse til å benytte autonome droner i dokkingstasjoner til jernbaneinspeksjon \parencite{railwaygazette_spain_2024}. Den internasjonale jernbaneunionen (UIC) driver prosjektet Drone4Rail, som i samarbeid med EASA utvikler et regulatorisk rammeverk for langdistanse BVLOS-inspeksjon av jernbane \parencite{uic_drone4rail_2024}. EU-prosjektet RADIUS (Railway Digitalisation Using Drones) har videre utarbeidet konsepter for droneintegrerte dokkingstasjoner og trafikkstyring \parencite{euspa_radius_2024}. Disse initiativene bekrefter at det teknologiske og regulatoriske grunnlaget for konseptet er i ferd med å modnes internasjonalt, og at norsk jernbane har muligheten til å posisjonere seg tidlig i en fremvoksende markedsstruktur.
+Konseptet har tydelige paralleller til pågående initiativ internasjonalt. I Spania har luftfartsmyndigheten AESA gitt selskapet Ineco tillatelse til å benytte autonome droner i dokkingstasjoner til jernbaneinspeksjon \parencite{railwaygazette_spain_2024}. Den internasjonale jernbaneunionen (UIC) driver prosjektet Drone4Rail, som i samarbeid med EASA utvikler et regulatorisk rammeverk for langdistanse BVLOS-inspeksjon av jernbane \parencite{uic_drone4rail_2024}. EU-prosjektet RADIUS (Railway Digitalisation Using Drones) har videre utarbeidet konsepter for droneintegrerte dokkingstasjoner og trafikkstyring \parencite{euspa_radius_2024}. I Norden gjennomførte EU-prosjektet Drones4Safety verdens første vellykkede landing og lading av en autonom drone på en høyspentlinje, demonstrert ved Aarhus Letbane i 2022. Prosjektet estimerer et besparelsespotensial på €15 mrd. årlig for europeisk transportinfrastruktur ved full kommersialisering (\cref{kontakt:ebeid}).
+
+Også i Norge er behovet empirisk bekreftet. Bane NOR omtaler automatisert tilstandsovervåking internt som «vegen videre for jernbanen», og et konkret prosjekt med autonom dronestasjon på Meråkerbanen i Trøndelag er planlagt igangsatt 2026--2027 med midler allerede bevilget (\cref{kontakt:traetten}). Nordic Unmanned, en norsk droneoperatør, drifter allerede syv permanente drone-i-boks-systemer for kritisk infrastruktur i Belgia og Finnmark og gjennomførte om lag 2\,500 flyvninger i 2025 (\cref{kontakt:wike}). Disse initiativene bekrefter at det teknologiske og regulatoriske grunnlaget for konseptet er i ferd med å modnes, og at norsk jernbane er godt posisjonert for tidlig adopsjon.
 
 Innovasjonsmessig er konseptet primært en \textit{inkrementell innovasjon}: droner og jernbaneinspeksjon eksisterer begge som separate fenomener, og løsningen kombinerer disse på en ny måte. Konseptet har likevel et element av \textit{disruptiv innovasjon} ved at det retter seg mot et kundesegment -- behovet for kontinuerlig, hendelsesstyrt tilstandsovervåking -- som dagens aktører ikke betjener \parencite[]{torvatn_teknologiledelse_2024}.
 
@@ -94,11 +94,11 @@ grunnhypoteser som utgangspunkt for mulighetsstudiet:
 
     \item \textbf{Kunde.} Primærkunden er infrastrukturforvaltere med ansvar for drift og vedlikehold av jernbane -- i første omgang Bane NOR SF i det norske markedet, med potensial for skalering til øvrige europeiske jernbaneforvaltere.
 
-    \item \textbf{Betalingsvilje.} Kunden vil kjøpe løsningen fordi den reduserer kostnader knyttet til reaktivt vedlikehold og driftsavbrudd, forbedrer HMS for inspeksjonspersonell og gir et bedre og mer kontinuerlig beslutningsgrunnlag for prioritering av vedlikeholdstiltak.
+    \item \textbf{Betalingsvilje.} Kunden vil kjøpe løsningen fordi den reduserer kostnader knyttet til reaktivt vedlikehold og driftsavbrudd, forbedrer HMS for inspeksjonspersonell og gir et bedre og mer kontinuerlig beslutningsgrunnlag for prioritering av vedlikeholdstiltak. Betalingsvilje er empirisk bekreftet: Bane NOR har allerede bevilget midler til et droneovervåkingsprosjekt på Meråkerbanen (\cref{kontakt:traetten}), og ifølge Albert Lau ved NTNU er slik vilje til stede i bransjen, men forutsetter dokumentert effekt -- gjerne med referanser fra andre europeiske land (\cref{kontakt:lau}).
 
     \item \textbf{Differensiering.} Løsningen skiller seg fra dagens operatørstyrte droner ved å være permanent stasjonert ved spesifikke kritiske objekter og ved å kombinere hendelsesstyrt inspeksjon med longitudinell dataanalyse. Dette muliggjør tidlig varsling og prediktivt vedlikehold -- noe dagens periodiske, transportbaserte inspeksjonsmetoder ikke kan tilby.
 
-    \item \textbf{Markedsvindu.} Det er en unik mulighet i markedet fordi jernbanesektoren globalt er midt i en digitaliseringsbølge, det europeiske regulatoriske rammeverket for BVLOS-operasjoner er i ferd med å modnes, og norsk jernbane har et akutt og erkjent behov for mer effektiv infrastrukturforvaltning -- kombinert med politisk prioritering av vedlikehold i NTP 2025--2036.
+    \item \textbf{Markedsvindu.} Det er en unik mulighet i markedet fordi jernbanesektoren globalt er midt i en digitaliseringsbølge, det europeiske regulatoriske rammeverket for BVLOS-operasjoner er i ferd med å modnes, og norsk jernbane har et akutt og erkjent behov for mer effektiv infrastrukturforvaltning -- kombinert med politisk prioritering av vedlikehold i NTP 2025--2036. Ifølge Albert Lau ved NTNU er de organisatoriske og regulatoriske barrierene større enn de tekniske (\cref{kontakt:lau}), noe som gir et fortrinn for aktører som posisjonerer seg tidlig i samarbeid med Bane NOR.
 \end{enumerate}
 
 Som et innledende rammeverk for de videre analysene presenteres i \cref{tab:pestel} en PESTEL-analyse av konseptet.
@@ -140,7 +140,7 @@ Som et innledende rammeverk for de videre analysene presenteres i \cref{tab:pest
         GPS-ytelse i og rundt tunneler \\
         \addlinespace
         Miljømessige &
-        Erstatter fossildrevne inspeksjonskjøretøy og helikopter;
+        Erstatter fossildrevne inspeksjonskjøretøy;
         muliggjør tilstandsbasert vedlikehold som reduserer overforbruk
         av materialer; støtter klimatilpasning av infrastruktur &
         Produksjon og avfallshåndtering av litium-batterier og
