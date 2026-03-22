@@ -13,34 +13,123 @@ skal inneholde følgende:
 \end{itemize}
 \end{tcolorbox}
 
-Kan skrive kjemi sånn her: \ce{CO2eq}.
-
-Resource conservation \cite[102]{bakshi_sustainable_2019}
-
-Dette kapittelet analyserer konseptets miljømessige og samfunnsmessige bærekraft. Analysen vurderer både hvordan løsningen samsvarer med overordnede utviklingsmål for klima, energi og ressursbruk, og hvilke miljøpåvirkninger som oppstår gjennom konseptets livsløp. 
+Dette kapittelet analyserer konseptets miljømessige og samfunnsmessige bærekraft i tre deler: (i) relasjon til overordnede politiske utviklingsmål, (ii) konseptets bidrag til bærekraftig utvikling, og (iii) en forenklet livsløpsvurdering (LCA) som kvantitativt grunnlag for miljøvurderingen. Detaljerte mellomregninger er samlet i \cref{app:beregninger}.
 
 \subsection{Relasjon til utviklingsmål}
 
+Konseptet med autonome droner for jernbaneinspeksjon er tett knyttet til sentrale nasjonale og internasjonale mål innen klima, infrastruktur og bærekraftig transport.
+
+\subsubsection{FNs bærekraftsmål}
+
+Av FNs 17 bærekraftsmål er særlig tre direkte relevante.
+
+\textbf{SDG~9 – Industri, innovasjon og infrastruktur} er det mest sentrale. Delmål~9.1 vektlegger utvikling av robust og bærekraftig infrastruktur, mens delmål~9.4 omhandler økt ressurseffektivitet. Dronesystemet bidrar til begge ved å styrke robustheten gjennom raskere feildeteksjon og muliggjøre mer målrettet, behovsbasert vedlikehold fremfor faste inspeksjonsintervaller.
+
+\textbf{SDG~11 – Bærekraftige byer og lokalsamfunn} er relevant fordi jernbanen er en nøkkelkomponent i et bærekraftig transportsystem. Delmål~11.2 fremhever behovet for trygge og tilgjengelige transportløsninger. Infrastrukturrelaterte avvik utgjorde 24\,\% av forsinkelsestimene i andre tertial 2024 \parencite{jernbanedirektoratet_gjennomforingsplan_2025}, noe som svekker jernbanens konkurranseevne. Konseptet kan redusere slike avvik og dermed styrke jernbanens attraktivitet som transportform.
+
+\textbf{SDG~13 – Stoppe klimaendringene} er relevant både direkte og indirekte. Direkte gjennom reduksjon av utslipp fra inspeksjonsaktivitet, og indirekte gjennom økt klimatilpasningsevne. Delmål~13.1 fremhever robusthet mot klimarelaterte hendelser; her gir kontinuerlig overvåking bedre beslutningsgrunnlag etter ekstremvær.
+
+\subsubsection{Norske klimamål}
+
+Norge har som mål å redusere klimagassutslipp med minst 55\,\% innen 2030 sammenlignet med 1990-nivå \parencite{miljodirektoratet_klimamal}. Transportsektoren er en sentral kilde til utslipp og prioritert for reduksjon. Dagens inspeksjonsmetoder — helikopter og dieselkjøretøy — inngår i disse utslippene. Konseptet erstatter disse med elektriske løsninger basert på fornybar energi og er dermed godt i tråd med nasjonale prioriteringer. Videre understøtter konseptet klimatilpasning ved å muliggjøre rask kartlegging etter ekstremvær.
+
+\subsubsection{EUs grønne vekststrategi}
+
+EUs \textit{European Green Deal} har som mål å redusere transportutslipp med 90\,\% innen 2050 og fremhever digitalisering som et sentralt virkemiddel \parencite{ec_green_deal}. Konseptet adresserer begge dimensjoner ved å redusere fossile utslipp og digitalisere inspeksjonsprosesser. For en løsning med ambisjon om europeisk skalering er denne tilpasningen også strategisk viktig.
+
 \subsection{Bidrag til bærekraftig utvikling}
 
+Basert på etablerte kategorier for miljømessig bærekraft identifiseres tre sentrale dimensjoner: klimagassutslipp og energibruk, materialressurser og avfall og sosiale forhold knyttet til arbeidsliv og sikkerhet.
+
+\subsubsection{Positive aspekter}
+
+\textbf{Reduserte klimagassutslipp.} Den mest direkte gevinsten er substitusjon av fossilbasert inspeksjon med elektriske droner. Med norsk strømmiks, som har svært lavt karbonfotavtrykk (23\,g~\ce{CO2eq}/kWh \parencite{nve_kraftproduksjon}), blir driftsutslippene minimale sammenlignet med helikopter- og dieselbaserte alternativer.
+
+\textbf{Mer ressurseffektivt vedlikehold.} Kontinuerlig tilstandsdata muliggjør prediktivt vedlikehold, som reduserer behovet for akutte og ressursintensive reparasjoner. Dette kan gi betydelige indirekte miljøgevinster, selv om disse er vanskelige å kvantifisere uten tilgang til vedlikeholdshistorikk fra Bane NOR.
+
+\textbf{Forbedret HMS.} Bruk av droner reduserer behovet for arbeid i risikofylte omgivelser — nær spor eller i høyden — og bidrar dermed positivt til sosial bærekraft.
+
+\subsubsection{Negative aspekter og avbøtende tiltak}
+
+\textbf{Batteriproduksjon og råmaterialer.} Produksjon av litium-ion-batterier er forbundet med betydelige utslipp og utfordringer knyttet til utvinning av kritiske materialer som kobolt og litium. Valg av leverandører med dokumentert ansvarlig utvinning og bruk av batterityper med lavere koboltinnhold (f.eks.\ LFP-kjemi) kan redusere denne belastningen.
+
+\textbf{Elektronikkavfall.} Systemet genererer EE-avfall ved endt levetid. Effektiv innsamling og gjenvinning i henhold til EUs WEEE-direktiv er avgjørende for å minimere miljøbelastningen. Produsentansvar bør innarbeides i forretningsmodellen.
+
+\textbf{Energibruk til digital infrastruktur.} Databehandling og lagring krever energi, men effekten kan begrenses ved bruk av datasentre med fornybar energimiks og energieffektive algoritmer for bildeprosessering.
+
+\textbf{Sosiale konsekvenser av automatisering.} Automatisering kan påvirke eksisterende arbeidsroller. Dette bør håndteres proaktivt gjennom kompetanseutvikling og tidlig involvering av ansatte, i dialog med Bane NOR.
+
 \subsection{Miljøanalyse}
+\label{subsec:lca}
 
-% Kan også være fotavtrykksanalyse eller materialflyt
-
-Miljøpåvirkningen vurderes ved hjelp av en forenklet livsløpsvurdering (LCA). Analysen under struktureres etter fire trinn, basert på metodikken beskrevet i \textcite[144]{bakshi_sustainable_2019}. Denne strukturen benyttes for systematisk å identifisere, kvantifisere og vurdere miljøpåvirkninger fra konseptet.
+Miljøpåvirkningen vurderes gjennom en forenklet livsløpsvurdering (LCA). Metoden er valgt fordi konseptet innebærer et fysisk system med tydelige livsløpsfaser der de viktigste miljøbidragene varierer mellom produksjon, drift og avhending. Analysen er ikke fullstendig i henhold til ISO~14040/14044, men gir et beslutningsrelevant estimat basert på tilgjengelige data og eksplisitte antagelser. Samtlige mellomregninger er dokumentert i \cref{app:beregninger}.
 
 \subsubsection{Mål- og omfangsdefinisjon}
 
-Formålet med analysen presiseres, inkludert beslutningsstøtte og sammenligningsgrunnlag. Funksjonell enhet defineres, og systemgrenser fastsettes (hvilke livsløpsfaser og prosesser som inkluderes eller ekskluderes). Sentrale antagelser og forenklinger dokumenteres.
+\paragraph{Formål.}
+Analysen skal vurdere klimagassavtrykket (\ce{CO2eq}) av det autonome dronesystemet sammenlignet med dagens inspeksjonspraksis. Formålet er å belyse om klimagevinsten i driftsfasen oppveier produksjonskostnaden, og å identifisere hvilke livsløpsfaser som er dominerende.
 
-\subsubsection{Inventaranalyse}
+\paragraph{Funksjonell enhet.}
+\textit{Kontinuerlig tilstandsovervåking og gjennomføring av behovsstyrte inspeksjoner av ett jernbaneobjekt (én bro) over ett kalenderår.}
 
-Relevante material- og energistrømmer kartlegges for alle prosesser innenfor systemgrensene. Datagrunnlag, kilder og eventuelle estimater beskrives og begrunnes.
+Referansesystemets tilsvarende funksjon er: \textit{periodisk manuell- og helikopterbasert inspeksjon av samme bro etter dagens praksis.}
 
-\subsubsection{Konsekvensvurdering}
+\paragraph{Systemgrense.}
+Analysen følger et «vugge til grav»-perspektiv for dronesystemet og dekker tre faser:
+\begin{enumerate}
+    \item \textbf{Produksjon:} råmaterialutvinning, komponentproduksjon og montering av droner og dokkingstasjon.
+    \item \textbf{Drift:} energiforbruk til flygning og lading, batteriutskiftning og vedlikehold.
+    \item \textbf{Avhending:} deponering og gjenvinning av batterier og elektronikk.
+\end{enumerate}
+For referansesystemet inkluderes kun driftsfasen (drivstofforbruk helikopter og kjøretøy). Helikoptre og kjøretøy er allerede i bruk til mange formål, og produksjonsutslippet lar seg ikke allokere til inspeksjonsaktiviteten alene uten ytterligere data. Dette er en konservativ antagelse som noe favoriserer dronesystemet, og er identifisert som en svakhet i analysen.
 
-Inventardata omregnes til miljøindikatorer, eksempelvis klimagassutslipp, energibruk og ressursforbruk. Resultatene brukes til å identifisere hvilke deler av livsløpet som bidrar mest til samlet miljøbelastning.
+\paragraph{Nøkkelantagelser.}
+En fullstendig liste over antagelser og begrunnelser finnes i \cref{app:beregninger}. De viktigste er:
+\begin{itemize}
+    \item To droner per objekt (DJI Matrice~300~RTK-klasse, ca.\ 9\,kg inkl.\ batteri, 274\,Wh per batteri); levetid 5 år.
+    \item Inspeksjonsfrekvens: 52 flygninger per år (én per uke), à 30\,min og 90\,W effektforbruk.
+    \item Norsk strømmiks: 23\,g~\ce{CO2eq}/kWh \parencite{nve_kraftproduksjon}.
+    \item Referansesystem: 2 helikopterinspeksjoner + 4 manuelle kjøretøyinspeksjoner per år \parencite{johannesen_bane_2021}.
+    \item \ce{CO2eq}-faktor for Li-ion-batteriproduksjon: 80\,kg~\ce{CO2eq}/kWh \parencite{lca_battery_2021}.
+\end{itemize}
+
+\subsubsection{Resultater}
+
+De beregnede klimagassutslippene er oppsummert i \cref{tab:lca_resultat}. Fullstendig inventaranalyse og alle mellomregninger er gjengitt i \cref{app:beregninger}.
+
+\begin{table}[ht]
+    \centering
+    \caption{Estimerte klimagassutslipp per bro per år. Alle tall er avrundede estimater; se \cref{app:beregninger} for mellomregninger.}
+    \label{tab:lca_resultat}
+    \begin{tabular}{llr}
+        \toprule
+        \textbf{System} & \textbf{Bidragspost} & \textbf{kg~\ce{CO2eq}/år} \\
+        \midrule
+        \multirow{6}{*}{Dronesystem}
+        & Batteriproduksjon (amortisert over levetid)    & 44 \\
+        & Elektronikk og ramme (amortisert)              & 16 \\
+        & Dokkingstasjon (amortisert over 10 år)         &  6 \\
+        & Batteriutskiftning (1 batteri per 2 år)        & 22 \\
+        & Ladeenergi (drift)                             & <1 \\
+        \cmidrule{2-3}
+        & \textbf{Sum dronesystem}                       & \textbf{$\approx$\,88} \\
+        \addlinespace
+        \hline
+        \multirow{3}{*}{Referansesystem}
+        & Helikopter (2 inspeksjoner à 1{,}5 t)          & 432 \\
+        & Kjøretøy (4 inspeksjoner à 100 km t/r)         &  68 \\
+        \cmidrule{2-3}
+        & \textbf{Sum referansesystem}                   & \textbf{$\approx$\,500} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Beregningen viser at dronesystemet slipper ut anslagsvis \textbf{88\,kg~\ce{CO2eq}} per bro per år, mot referansesystemets \textbf{500\,kg~\ce{CO2eq}} — en reduksjon på om lag \textbf{82\,\%}. Produksjonsfasen dominerer dronesystemets utslipp: over 90\,\% stammer fra batterier, elektronikk og dokkingstasjon, mens driftsutslippene er marginale grunnet Norges rene energimiks. For referansesystemet dominerer drivstofforbruk i driftsfasen. Norges jernbanenett har over 2\,700 broer \parencite{jernbanedirektoratet_tall}; innføres systemet ved 500 kritiske objekter, tilsvarer besparelsen omlag $500 \times 412\,\text{kg} \approx \textbf{206\,\text{t}~\ce{CO2eq}/år}$ i direkte inspeksjonsrelaterte utslipp.
 
 \subsubsection{Tolkning}
 
-Resultatene analyseres kritisk for å identifisere styrker, svakheter og forbedringsmuligheter ved konseptet. Usikkerheter og databegrensninger diskuteres, og implikasjoner for videre utvikling av løsningen vurderes.
+\paragraph{Funn.}
+Analysen indikerer at dronesystemet har vesentlig lavere klimagassutslipp enn referansesystemet. Klimabelastningen fra produksjonsfasen tilbakebetales raskt gjennom reduserte driftsutslipp. I tillegg kommer potensielt store indirekte gevinster fra prediktivt vedlikehold som reduserer akutte, materialintensive reparasjoner — en effekt som ikke er kvantifisert i denne analysen.
+
+\paragraph{Begrensninger og usikkerhet.}
+Resultatene er beheftet med usikkerhet på flere punkter. For det første er produksjonsutslippet for dronene estimert fra generiske LCA-data for tilsvarende utstyrsklasse, ikke fra produsentspesifikke data. For det andre er avhendingsfasen ikke fullt modellert, ettersom gjenvinningsrater for batterier og elektronikk varierer betydelig. For det tredje er referansesystemets produksjonsutslipp utelatt, noe som konservativt favoriserer dronesystemet. Til tross for disse svakhetene vurderes hovedkonklusjonen som robust: forskjellen mellom systemene (82\,\%) er stor nok til å absorbere rimelige feilmarginer. For en mer fullstendig analyse anbefales det å innhente EPD-data (Environmental Product Declaration) fra droneprodusenter og faktisk vedlikeholdsstatistikk fra Bane NOR.

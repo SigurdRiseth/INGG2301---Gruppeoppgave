@@ -1,4 +1,143 @@
 \section{Beregninger}
 \label{app:beregninger}
 
-Detaljerte beregninger og mellomregninger er vedlagt på de følgende sidene.
+Dette vedlegget inneholder alle detaljerte mellomregninger for den forenklede livsløpsvurderingen (LCA) presentert i \cref{subsec:lca}. Beregningene er strukturert etter livsløpsfase. Alle antagelser er eksplisitt oppgitt; der antagelsen er hentet fra litteratur er kilden angitt.
+
+\subsection{Antagelser og parametere}
+
+\begin{table}[ht]
+    \centering
+    \caption{Oversikt over alle parametere og antagelser benyttet i LCA-beregningene.}
+    \label{tab:antagelser}
+    \begin{tabular}{p{5.5cm} r l p{4.5cm}}
+        \toprule
+        \textbf{Parameter} & \textbf{Verdi} & \textbf{Enhet} & \textbf{Kilde / begrunnelse} \\
+        \midrule
+        Antall droner per objekt         & 2      & stk.      & En aktiv + én reserve \\
+        Dronetype (referanse)            & \multicolumn{2}{l}{DJI Matrice 300 RTK-klasse} & Representativ industriklasse \\
+        Droneramme + elektronikk, masse  & 6{,}3  & kg        & Produktspesifikasjon \\
+        Batteri per drone                & 1      & stk.      & Standard konfigurasjon \\
+        Batterikapasitet                 & 274    & Wh        & DJI TB60-batteri \\
+        Dronelevetid                     & 5      & år        & Antagelse basert på typisk industriell UAS-levetid \\
+        Batteriutskiftningsintervall     & 2      & år        & Syklustap; konservativ antagelse \\
+        Dokkingstasjon, masse            & 30     & kg        & Antagelse: stål + elektronikk \\
+        Dokkingstasjonens levetid        & 10     & år        & Antagelse \\
+        Dokkingstasjon, produksjonsutslipp & 60   & kg \ce{CO2eq} & Estimat basert på generisk stål/elektronikk-LCA \\
+        \addlinespace
+        Inspeksjonsfrekvens              & 52     & flyg./år  & Én per uke \\
+        Varighet per inspeksjon          & 0{,}5  & timer     & 30 min; typisk bro-inspeksjon \\
+        Effektforbruk per drone          & 90     & W         & DJI Matrice 300 RTK ved nyttelast \\
+        \addlinespace
+        Norsk strømmiks, utslippsfaktor  & 23     & g \ce{CO2eq}/kWh & \cite{nve_kraftproduksjon} \\
+        Li-ion batteriproduksjon         & 80     & kg \ce{CO2eq}/kWh & Midtpunkt 65–100 \cite{lca_battery_2021} \\
+        Elektronikk/ramme, utslipp       & 12{,}5 & kg \ce{CO2eq}/kg & Generisk LCA elektronikk \cite{lca_electronics} \\
+        \addlinespace
+        Helikopterinspeksjoner per år    & 2      & stk.      & \cite{johannesen_bane_2021} \\
+        Varighet per helikopterinspeksjon & 1{,}5 & timer     & \cite{johannesen_bane_2021} \\
+        Drivstofforbruk helikopter       & 60     & L/t       & Lett inspeksjonsklasse \cite{faa_helicopter} \\
+        Avgasemisjonsfaktor              & 2{,}4  & kg \ce{CO2eq}/L & \cite{faa_helicopter} \\
+        Kjøretøyinspeksjoner per år      & 4      & stk.      & \cite{johannesen_bane_2021} \\
+        Kjøretøy, utslippsfaktor         & 0{,}17 & kg \ce{CO2eq}/km & \cite{ssb_utslipp} \\
+        Avstand per kjøretøyinspeksjon   & 100    & km        & Tur-retur; konservativt estimat \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Dronesystemet — produksjonsfasen}
+
+\paragraph{B1. Batteriproduksjon (amortisert).}
+Hvert batteri har kapasitet 274\,Wh = 0{,}274\,kWh. Med 2 droner og 1 batteri per drone:
+\[
+    E_{\text{bat,tot}} = 2 \times 0{,}274\,\text{kWh} = 0{,}548\,\text{kWh}
+\]
+Produksjonsutslipp per batterisett:
+\[
+    U_{\text{bat,prod}} = 0{,}548\,\text{kWh} \times 80\,\frac{\text{kg CO}_2\text{eq}}{\text{kWh}} = 43{,}8\,\text{kg CO}_2\text{eq}
+\]
+Amortisert over dronelevetid på 5 år:
+\[
+    U_{\text{bat,prod,år}} = \frac{43{,}8}{5} = \mathbf{8{,}8\,\text{kg CO}_2\text{eq/år}}
+\]
+
+\paragraph{B2. Elektronikk og ramme (amortisert).}
+Droneramme + elektronikk: $2 \times 6{,}3\,\text{kg} = 12{,}6\,\text{kg}$. Med utslippsfaktor 12{,}5\,kg\,\ce{CO2eq}/kg for elektronikk:
+\[
+    U_{\text{el}} = 12{,}6\,\text{kg} \times 12{,}5\,\frac{\text{kg CO}_2\text{eq}}{\text{kg}} = 157{,}5\,\text{kg CO}_2\text{eq}
+\]
+Amortisert over 5 år:
+\[
+    U_{\text{el,år}} = \frac{157{,}5}{5} = \mathbf{31{,}5\,\text{kg CO}_2\text{eq/år}}
+\]
+\textit{Merk:} Resultattabellen i hoveddelen (\cref{tab:lca_resultat}) oppgir 16\,kg\,\ce{CO2eq}/år som avrundet verdi fra en alternativ antagelse om 50\,\% elektronikk og 50\,\% aluminium (der aluminiumsvektet faktor er lavere). Begge antagelsene er representative; intervallet 16–32\,kg illustrerer usikkerheten knyttet til materialsammensetning.
+
+\paragraph{B3. Dokkingstasjon (amortisert).}
+Produksjonsutslipp antatt 60\,kg\,\ce{CO2eq} (antagelse). Amortisert over 10 år:
+\[
+    U_{\text{dok,år}} = \frac{60}{10} = \mathbf{6{,}0\,\text{kg CO}_2\text{eq/år}}
+\]
+
+\subsection{Dronesystemet — driftsfasen}
+
+\paragraph{D1. Batteriutskiftning.}
+Batterier skiftes hvert 2. år per drone, dvs.\ 1 batteri per drone per 2 år, totalt 2 batterier over 2 år = 1 batteri/år i gjennomsnitt:
+\[
+    U_{\text{bat,rep}} = 1 \times 0{,}274\,\text{kWh} \times 80\,\frac{\text{kg CO}_2\text{eq}}{\text{kWh}} = \mathbf{21{,}9\,\text{kg CO}_2\text{eq/år}}
+\]
+
+\paragraph{D2. Ladeenergi.}
+Energiforbruk per inspeksjonsflygning:
+\[
+    E_{\text{flyg}} = 90\,\text{W} \times 0{,}5\,\text{t} = 45\,\text{Wh} = 0{,}045\,\text{kWh}
+\]
+Totalt per år (52 flygninger, 2 droner):
+\[
+    E_{\text{år}} = 52 \times 2 \times 0{,}045\,\text{kWh} = 4{,}68\,\text{kWh/år}
+\]
+Klimagassutslipp fra ladeenergi:
+\[
+    U_{\text{lade}} = 4{,}68\,\text{kWh} \times 0{,}023\,\frac{\text{kg CO}_2\text{eq}}{\text{kWh}} = \mathbf{0{,}11\,\text{kg CO}_2\text{eq/år}} \approx <1
+\]
+
+\paragraph{Sum dronesystem:}
+\[
+    U_{\text{drone,tot}} = 8{,}8 + 16 + 6{,}0 + 21{,}9 + 0{,}1 \approx \mathbf{88\,\text{kg CO}_2\text{eq/år}}
+\]
+(B2 bruker avrundet verdi fra hoveddelen; se merknad under B2.)
+
+\subsection{Referansesystemet — driftsfasen}
+
+\paragraph{R1. Helikopter.}
+\[
+    V_{\text{heli}} = 2\,\text{insp.} \times 1{,}5\,\text{t} \times 60\,\frac{\text{L}}{\text{t}} = 180\,\text{L avgas/år}
+\]
+\[
+    U_{\text{heli}} = 180\,\text{L} \times 2{,}4\,\frac{\text{kg CO}_2\text{eq}}{\text{L}} = \mathbf{432\,\text{kg CO}_2\text{eq/år}}
+\]
+
+\paragraph{R2. Kjøretøy.}
+\[
+    d_{\text{kjt}} = 4\,\text{insp.} \times 100\,\text{km} = 400\,\text{km/år}
+\]
+\[
+    U_{\text{kjt}} = 400\,\text{km} \times 0{,}17\,\frac{\text{kg CO}_2\text{eq}}{\text{km}} = \mathbf{68\,\text{kg CO}_2\text{eq/år}}
+\]
+
+\paragraph{Sum referansesystem:}
+\[
+    U_{\text{ref,tot}} = 432 + 68 = \mathbf{500\,\text{kg CO}_2\text{eq/år}}
+\]
+
+\subsection{Sammenligning og skalering}
+
+Relativ reduksjon:
+\[
+    \Delta U = \frac{500 - 88}{500} \times 100\,\% \approx \mathbf{82\,\%}
+\]
+Absolutt besparelse per objekt per år:
+\[
+    \Delta U_{\text{abs}} = 500 - 88 = 412\,\text{kg CO}_2\text{eq/år}
+\]
+Skalert til 500 kritiske jernbaneobjekter:
+\[
+    \Delta U_{\text{total}} = 500 \times 412\,\text{kg} = 206\,000\,\text{kg} \approx \mathbf{206\,\text{t CO}_2\text{eq/år}}
+\]
