@@ -32,13 +32,12 @@ Dette vedlegget inneholder alle detaljerte mellomregninger for den forenklede li
         Li-ion batteriproduksjon         & 80     & kg \ce{CO2eq}/kWh & Midtpunkt 65–100 \cite{lca_battery_2021} \\
         Elektronikk/ramme, utslipp       & 12{,}5 & kg \ce{CO2eq}/kg & Generisk LCA elektronikk \cite{lca_electronics} \\
         \addlinespace
-        Helikopterinspeksjoner per år    & 2      & stk.      & \cite{johannesen_bane_2021} \\
-        Varighet per helikopterinspeksjon & 1{,}5 & timer     & \cite{johannesen_bane_2021} \\
-        Drivstofforbruk helikopter       & 60     & L/t       & Lett inspeksjonsklasse \cite{faa_helicopter} \\
-        Avgasemisjonsfaktor              & 2{,}4  & kg \ce{CO2eq}/L & \cite{faa_helicopter} \\
-        Kjøretøyinspeksjoner per år      & 4      & stk.      & \cite{johannesen_bane_2021} \\
+        Inspeksjoner per år (referanse)  & 52     & stk.      & Tilsvarer dronesystemets ukentlige frekvens \\
         Kjøretøy, utslippsfaktor         & 0{,}17 & kg \ce{CO2eq}/km & \cite{ssb_utslipp} \\
         Avstand per kjøretøyinspeksjon   & 100    & km        & Tur-retur; konservativt estimat \\
+        \addlinespace
+        Dagens praksis – driftskontroll  & 1      & per år    & Bane NOR, \parencite{app:kontaktlogg} \\
+        Dagens praksis – ingeniørkontroll & 1/6   & per år    & Bane NOR (hvert 6. år), \parencite{app:kontaktlogg} \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -106,38 +105,45 @@ Klimagassutslipp fra ladeenergi:
 
 \subsection{Referansesystemet — driftsfasen}
 
-\paragraph{R1. Helikopter.}
+Referansesystemet representerer 52 manuelle kjøretøyinspeksjoner per år — tilsvarende dronesystemets ukentlige driftsmodus. Dagens faktiske praksis (1 driftskontroll/år + ingeniørkontroll hvert 6. år) er beregnet separat for kontekst.
+
+\paragraph{R1. Kjøretøy ved ekvivalent inspeksjonsfrekvens (52/år).}
 \[
-    V_{\text{heli}} = 2\,\text{insp.} \times 1{,}5\,\text{t} \times 60\,\frac{\text{L}}{\text{t}} = 180\,\text{L avgas/år}
+    d_{\text{kjt}} = 52\,\text{insp.} \times 100\,\text{km} = 5\,200\,\text{km/år}
 \]
 \[
-    U_{\text{heli}} = 180\,\text{L} \times 2{,}4\,\frac{\text{kg CO}_2\text{eq}}{\text{L}} = \mathbf{432\,\text{kg CO}_2\text{eq/år}}
+    U_{\text{kjt}} = 5\,200\,\text{km} \times 0{,}17\,\frac{\text{kg CO}_2\text{eq}}{\text{km}} = \mathbf{884\,\text{kg CO}_2\text{eq/år}}
 \]
 
-\paragraph{R2. Kjøretøy.}
+\paragraph{R2. Kjøretøy ved dagens faktiske praksis (kontekst).}
+Driftskontroll, 1 gang per år:
 \[
-    d_{\text{kjt}} = 4\,\text{insp.} \times 100\,\text{km} = 400\,\text{km/år}
+    U_{\text{drift}} = 1 \times 100\,\text{km} \times 0{,}17 = 17\,\text{kg CO}_2\text{eq/år}
+\]
+Ingeniørkontroll hvert 6. år (amortisert):
+\[
+    U_{\text{ing}} = \frac{1}{6} \times 100\,\text{km} \times 0{,}17 \approx 3\,\text{kg CO}_2\text{eq/år}
 \]
 \[
-    U_{\text{kjt}} = 400\,\text{km} \times 0{,}17\,\frac{\text{kg CO}_2\text{eq}}{\text{km}} = \mathbf{68\,\text{kg CO}_2\text{eq/år}}
+    U_{\text{ref,dagens}} = 17 + 3 = \mathbf{20\,\text{kg CO}_2\text{eq/år}}
 \]
 
-\paragraph{Sum referansesystem:}
+\paragraph{Sum referansesystem (ekvivalent frekvens):}
 \[
-    U_{\text{ref,tot}} = 432 + 68 = \mathbf{500\,\text{kg CO}_2\text{eq/år}}
+    U_{\text{ref,tot}} = \mathbf{884\,\text{kg CO}_2\text{eq/år}}
 \]
 
 \subsection{Sammenligning og skalering}
 
-Relativ reduksjon:
+Relativ reduksjon ved ekvivalent inspeksjonsfrekvens:
 \[
-    \Delta U = \frac{500 - 88}{500} \times 100\,\% \approx \mathbf{82\,\%}
+    \Delta U = \frac{884 - 88}{884} \times 100\,\% \approx \mathbf{90\,\%}
 \]
 Absolutt besparelse per objekt per år:
 \[
-    \Delta U_{\text{abs}} = 500 - 88 = 412\,\text{kg CO}_2\text{eq/år}
+    \Delta U_{\text{abs}} = 884 - 88 = 796\,\text{kg CO}_2\text{eq/år}
 \]
 Skalert til 500 kritiske jernbaneobjekter:
 \[
-    \Delta U_{\text{total}} = 500 \times 412\,\text{kg} = 206\,000\,\text{kg} \approx \mathbf{206\,\text{t CO}_2\text{eq/år}}
+    \Delta U_{\text{total}} = 500 \times 796\,\text{kg} = 398\,000\,\text{kg} \approx \mathbf{398\,\text{t CO}_2\text{eq/år}}
 \]
