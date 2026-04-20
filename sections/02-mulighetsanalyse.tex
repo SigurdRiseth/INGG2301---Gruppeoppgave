@@ -45,12 +45,28 @@ Løsning og verdiforslag: \textit{Hva er løsningen din, og hvorfor skal folk br
 % ----- Halvard under her:
 
 \subsection{Markedspotensial}
+\subsection{Markedspotensial}
+
+\textbf{Kunde og bruker.} Primærkunden, den som eier problemet og har budsjettansvar, er Bane NOR SF. Brukerne er bane- og bruingeniører samt vedlikeholdspersonell som konsumerer tilstandsdata som grunnlag for prioritering og utbedring.
+
+\textbf{Dagens løsning.} Behovet dekkes i dag gjennom årlige driftskontroller og ingeniørkontroller hvert sjette år, supplert med operatørstyrte droner og målevognen Roger 1000 (\cref{kontakt:traetten}). Ekstern inspeksjonskapasitet kjøpes fra aktører som Axess Group og droneoperatører på rammeavtale, men løsningene er arbeidsintensive og gir ikke et kontinuerlig tilstandsbilde (\cref{kontakt:eide}).
+
+\textbf{Verdiskaping.} Konseptet skaper verdi langs tre akser: (i) redusert nedetid gjennom tidligere feildeteksjon, der infrastrukturfeil utgjorde 24~\% av forsinkelsestimene i andre tertial 2024~\cite{jernbanedirektoratet_gjennomforingsplan_2025}; (ii) reduserte HMS-kostnader ved å fjerne personell fra spor og høye konstruksjoner; (iii) overgang fra reaktivt til prediktivt vedlikehold gjennom longitudinell dataanalyse.
+
+\textbf{Pris og betalingsvilje.} Vi foreslår en hybrid prismodell: salg av dokkingstasjon og drone (engangskostnad 1--1,5~MNOK per objekt, basert på referansetall fra Nordic Unmanned, \cref{kontakt:wike}) pluss et årlig abonnement på analyseplattform og drift (anslagsvis 200--300~kNOK per objekt). Modellen reflekterer at Bane NOR foretrekker eierskap til utstyr og data (\cref{kontakt:traetten}), mens operatørene ønsker forutsigbare beredskapsinntekter (\cref{kontakt:wike}). Betalingsvilje er dokumentert gjennom bevilgningen til Meråkerbanen-prosjektet. Samtidig viser Nordic Unmanneds fireårige rammeavtale fra 2021, der forventet omsetning på 30~MNOK endte på om lag 436\,000~kr før selskapet gikk konkurs i februar 2025~\cite{aga_forventet_2025,dahl_droneselskap_2025}, at nominelle rammeavtaler med Bane NOR ikke automatisk konverterer til reell omsetning. Realistisk prising må derfor ta høyde for lav faktisk utnyttelse.
+
+\textbf{Segmentering og markedsstørrelse.} Markedet segmenteres etter infrastrukturtype (bro, tunnel, fjellskjæring) og kritikalitet. Vi fokuserer på de \emph{kritiske} objektene: anslagsvis 500 av de 2\,700+ broene~\cite{jernbanedirektoratet_tall} der inspeksjonsfrekvens og skadekonsekvens rettferdiggjør permanente installasjoner, pluss et ukjent antall høyrisiko fjellskjæringer, som Trætten fremhever som det mest prekære overvåkingsbehovet (\cref{kontakt:traetten}).
+
+\textbf{Markedsvekst.} Det globale markedet for drone-basert jernbaneinspeksjon er estimert til å vokse fra 1,67~mrd.~USD i 2025 til 4,86~mrd.~USD i 2030, tilsvarende en årlig vekst (CAGR) på om lag 24~\%~\cite{businessresearch_drone_2025}. Veksten drives av lettelser i BVLOS-regelverket, aldrende infrastruktur og modning av AI-drevne plattformer for prediktivt vedlikehold.
+
 
 \subsection{Forretningsmodell, kommersialisering og økonomiske betraktninger}
 
 % ---- Elias under her:
+Konseptet baserer seg på en tjenesteorientert forretningsmodell hvor autonome dronesystemer brukes til kontinuerlig tilstandsovervåking av jernbaneinfrastruktur. Verdiforslaget er å gjøre det mulig for infrastrukturforvaltere som Bane NOR å gå fra reaktivt til prediktivt vedlikehold, samtidig som behovet for manuell inspeksjon og risiko for personell reduseres.
 
 \subsubsection{Forretningsmodellen}
+Kundesegmentet består primært av jernbaneinfrastrukturforvaltere, med Bane NOR som første målgruppe. Verdien skapes gjennom økt inspeksjonsfrekvens, bedre beslutningsgrunnlag og redusert nedetid. Inntektsmodellen kan enten være en tjenestemodell (drone-as-a-service) eller en hybrid modell hvor kunden eier systemet og betaler for drift og analyse. Sistnevnte støttes av bransjeinnsikt som viser at kunder ofte ønsker eierskap til data og utstyr. Nøkkelressurser inkluderer dronebaser, AI-basert analyse og regulatorisk kompetanse, mens nøkkelpartnere vil være droneselskaper, teknologileverandører og juridiske aktører innen luftfartsregelverk.
 
 Se \textit{Business Model Canvas} i \cref{fig:lerret-for-forretningsmodell}
 
@@ -62,9 +78,92 @@ Se \textit{Business Model Canvas} i \cref{fig:lerret-for-forretningsmodell}
 \end{figure}
 
 \subsubsection{Kommersialisering}
+Kommersialiseringen vil skje stegvis, med pilotprosjekter ved utvalgte kritiske infrastrukturobjekter for å dokumentere effekt og redusere risiko. Dette er i tråd med eksisterende initiativer i bransjen, hvor implementering av ny teknologi skjer gradvis og krever dokumentert nytteverdi. Videre skalering vil skje gjennom langsiktige kontrakter med infrastrukturforvaltere, eventuelt i samarbeid med etablerte droneoperatører. Viktige barrierer inkluderer regulatoriske krav, særlig knyttet til BVLOS-operasjoner, samt komplekse offentlige anskaffelsesprosesser. Konseptet befinner seg i en tidlig fase med høyt kapitalbehov og usikkerhet, men også et betydelig markedspotensial drevet av økende behov for effektiv og sikker infrastrukturforvaltning.
 
-% ---- Theodor under her:
+
+% ---- Theodor under her
+
 
 \subsubsection{Økonomiske betraktninger: kostnader, inntekter og finansiering}
+Vår virksomhet kan klassifiseres som en vekstbedrift i idé- og
+utviklingsfasen, kjennetegnet av intensiv FoU, høy usikkerhet,
+betydelig kapitalbehov og omfattende ulønnet egeninnsats fra
+grunderne \parencite[80--81]{torvatn_teknologiledelse_2024}. Det
+økonomiske oppsettet består derfor av et drifts-, investerings-
+og likviditetsbudsjett for 2027 (se \cref{app:budsjett}),
+strukturert etter Altinns veileder for oppstartsbedrifter og
+retningslinjene i INGX2301.
 
-Vår virksomhet kan klassifiseres som en vekstbedrift som befinner seg i idé- og utviklingsfasen. Denne fasen er preget av et intensivt behov for forsknings- og utviklingsaktiviteter (FoU), systematisk oppbygging og videreutvikling av teknologikunnskap, høy grad av usikkerhet og risiko, samt et betydelig kapitalbehov. I tillegg forutsetter fasen omfattende ulønnet egeninnsats fra entreprenører og eventuelle samarbeidspartnere \parencite[80--81]{torvatn_teknologiledelse_2024}.
+\paragraph{Kostnader.} Fem grundere tar delvis lønn på ca.\
+15~kNOK brutto per måned (20~kNOK inkl.\ sosiale kostnader per
+person, totalt 100~kNOK/mnd), mens resterende arbeidsinnsats er
+ulønnet egeninnsats. Investeringene på ca.\ 1,48~MNOK omfatter én
+prototypedrone (DJI~Matrice~350~RTK), utviklingsutstyr og
+programvarelisenser, avskrevet lineært over fem år (NRS~8).
+Dokkingstasjoner og pilotinstallasjon utsettes til etablerings-
+og kommersialiseringsfasen i år 2--3. Samlede driftskostnader
+beløper seg til ca.\ 1,8~MNOK.
+
+\paragraph{Inntekter.} Utviklingsåret budsjetteres tilnærmet
+inntektsløst, slik læreboken beskriver som typisk for første
+driftsår i FoU-tunge virksomheter. Vi budsjetterer kun 75~kNOK fra
+sporadiske konsulent- og rådgivningsoppdrag. Den hybride salgs- og
+abonnementsmodellen beskrevet i \cref{sec:forretningsmodell}
+aktiveres først ved pilotavtale i år 2.
+
+\paragraph{Finansiering.} Kapitalbehovet på ca.\ 3,3~MNOK dekkes
+av egenkapital (250~kNOK, 50~kNOK per grunder), soft funding
+(StudENT 1~MNOK, SkatteFUNN 500~kNOK, Innovasjon Norge, Aneo-
+bidraget og Discovery-stipend) og kassakreditt på 1,3~MNOK.
+Tilskuddsbasert finansiering ble valgt fremfor aksjeemisjon for å
+bevare grundernes eierandeler og som ekstern kvalitetsvurdering av
+teknologien. Break-even-analysen (\cref{app:budsjett}) indikerer
+at 2--3 dokkingstasjoner i stabil drift er tilstrekkelig for
+lønnsomhet.
+
+\paragraph{Likviditet.} Timingen er like kritisk som summen.
+StudENTs rate-struktur gir et maksimalt kassakredittbehov på
+1,57~MNOK i juli, som overstiger rammen på 1,3~MNOK. Gapet kan
+lukkes gjennom leasing av drone, utsatt anskaffelse eller en
+fremskyndet utbetalingsprofil med Innovasjon Norge.\subsubsection{Økonomiske betraktninger: kostnader, inntekter og finansiering}
+Vår virksomhet kan klassifiseres som en vekstbedrift i idé- og
+utviklingsfasen, kjennetegnet av intensiv FoU, høy usikkerhet,
+betydelig kapitalbehov og omfattende ulønnet egeninnsats fra
+grunderne \parencite[80--81]{torvatn_teknologiledelse_2024}. Det
+økonomiske oppsettet består derfor av et drifts-, investerings-
+og likviditetsbudsjett for 2027 (se \cref{app:budsjett}),
+strukturert etter Altinns veileder for oppstartsbedrifter og
+retningslinjene i INGX2301.
+
+\paragraph{Kostnader.} Fem grundere tar delvis lønn på ca.\
+15~kNOK brutto per måned (20~kNOK inkl.\ sosiale kostnader per
+person, totalt 100~kNOK/mnd), mens resterende arbeidsinnsats er
+ulønnet egeninnsats. Investeringene på ca.\ 1,48~MNOK omfatter én
+prototypedrone (DJI~Matrice~350~RTK), utviklingsutstyr og
+programvarelisenser, avskrevet lineært over fem år (NRS~8).
+Dokkingstasjoner og pilotinstallasjon utsettes til etablerings-
+og kommersialiseringsfasen i år 2--3. Samlede driftskostnader
+beløper seg til ca.\ 1,8~MNOK.
+
+\paragraph{Inntekter.} Utviklingsåret budsjetteres tilnærmet
+inntektsløst, slik læreboken beskriver som typisk for første
+driftsår i FoU-tunge virksomheter. Vi budsjetterer kun 75~kNOK fra
+sporadiske konsulent- og rådgivningsoppdrag. Den hybride salgs- og
+abonnementsmodellen beskrevet i \cref{sec:forretningsmodell}
+aktiveres først ved pilotavtale i år 2.
+
+\paragraph{Finansiering.} Kapitalbehovet på ca.\ 3,3~MNOK dekkes
+av egenkapital (250~kNOK, 50~kNOK per grunder), soft funding
+(StudENT 1~MNOK, SkatteFUNN 500~kNOK, Innovasjon Norge, Aneo-
+bidraget og Discovery-stipend) og kassakreditt på 1,3~MNOK.
+Tilskuddsbasert finansiering ble valgt fremfor aksjeemisjon for å
+bevare grundernes eierandeler og som ekstern kvalitetsvurdering av
+teknologien. Break-even-analysen (\cref{app:budsjett}) indikerer
+at 2--3 dokkingstasjoner i stabil drift er tilstrekkelig for
+lønnsomhet.
+
+\paragraph{Likviditet.} Timingen er like kritisk som summen.
+StudENTs rate-struktur gir et maksimalt kassakredittbehov på
+1,57~MNOK i juli, som overstiger rammen på 1,3~MNOK. Gapet kan
+lukkes gjennom leasing av drone, utsatt anskaffelse eller en
+fremskyndet utbetalingsprofil med Innovasjon Norge.
