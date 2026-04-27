@@ -51,9 +51,9 @@ I teknologimatrisa $\mathbf{A}$ representerer positive diagonale elementer en pr
     
     % Utslipp til natur
     \draw[eflow] (elec.south) -- ++(0,-0.85)
-        node[below,font=\footnotesize,align=center]{23 g \ce{CO2eq}/kWh};
+        node[below,font=\footnotesize,align=center]{15 g \ce{CO2eq}/kWh};
     \draw[eflow] (hw.west) -- ++(-0.9,0)
-        node[left,font=\footnotesize,align=center]{53--68 kg \ce{CO2eq}/år};
+        node[left,font=\footnotesize,align=center]{30--37 kg \ce{CO2eq}/år};
     
     \begin{scope}[on background layer]
         \node[boundary, fit=(elec)(hw)(drone),
@@ -85,7 +85,7 @@ I teknologimatrisa $\mathbf{A}$ representerer positive diagonale elementer en pr
     
     \end{tikzpicture}
     \caption{Prosesskart for dronesystemet (øverst) og referansesystemet (nederst).
-    Heltrukne piler viser produktstrømmer; stiplete oransje piler viser miljøintervensjoner. Grønne ellipser er naturlige innsatsmidler eller -utslippsmottakere utenfor systemgrensen. Intervallet 53--68 kg \ce{CO2eq}/år for dronesystemet reflekterer usikkerheten i materialsammensetning for elektronikk og ramme (se B2).}
+    Heltrukne piler viser produktstrømmer; stiplete oransje piler viser miljøintervensjoner. Grønne ellipser er naturlige innsatsmidler eller -utslippsmottakere utenfor systemgrensen. Intervallet 30--37 kg \ce{CO2eq}/år for dronesystemet reflekterer usikkerheten i materialsammensetning for elektronikk og ramme (se B2).}
     \label{fig:prosessnettverk}
 \end{figure}
 
@@ -99,7 +99,7 @@ I teknologimatrisa $\mathbf{A}$ representerer positive diagonale elementer en pr
         \toprule
         \textbf{Parameter} & \textbf{Verdi} & \textbf{Enhet} & \textbf{Kilde / begrunnelse} \\
         \midrule
-        Antall droner per objekt         & 2      & stk.      & En aktiv + én reserve \\
+        Antall droner per objekt         & 1      & stk.      & Én drone per objekt \\
         Dronetype (referanse)            & \multicolumn{2}{l}{DJI Matrice 300 RTK-klasse} & Representativ industriklasse \\
         Droneramme + elektronikk, masse  & 6{,}3  & kg        & Produktspesifikasjon \\
         Batteri per drone                & 1      & stk.      & Standard konfigurasjon \\
@@ -111,10 +111,10 @@ I teknologimatrisa $\mathbf{A}$ representerer positive diagonale elementer en pr
         Dokkingstasjon, produksjonsutslipp & 60   & kg \ce{CO2eq} & Estimat basert på generisk stål/elektronikk-LCA \\
         \addlinespace
         Inspeksjonsfrekvens              & 52     & flyg./år  & Én per uke \\
-        Varighet per inspeksjon          & 0{,}5  & timer     & 30 min; typisk bro-inspeksjon \\
+        Varighet per inspeksjon          & 0{,}5  & timer     & 30 min; typisk objektinspeksjon \\
         Effektforbruk per drone          & 90     & W         & DJI Matrice 300 RTK ved nyttelast \\
         \addlinespace
-        Norsk strømmiks, utslippsfaktor  & 23     & g \ce{CO2eq}/kWh & \cite{nve_kraftproduksjon} \\
+        Norsk strømmiks, utslippsfaktor  & 15     & g \ce{CO2eq}/kWh & \cite{nve_kraftproduksjon} \\
         Li-ion batteriproduksjon         & 80     & kg \ce{CO2eq}/kWh & Midtpunkt 65--100 \cite{lca_battery_2021} \\
         Elektronikk/ramme, utslipp (ren elektronikk) & 12{,}5 & kg \ce{CO2eq}/kg & Generisk LCA elektronikk \cite{lca_battery_2021} \\
         Elektronikk/ramme, utslipp (blandet: 50\,\% elektronikk + 50\,\% resirkulert aluminium) & 6{,}4 & kg \ce{CO2eq}/kg & Vektet gjennomsnitt; se B2 \\
@@ -132,36 +132,36 @@ I teknologimatrisa $\mathbf{A}$ representerer positive diagonale elementer en pr
 \subsection{Dronesystemet — produksjonsfasen}
 
 \paragraph{B1. Batteriproduksjon (amortisert).}
-Hvert batteri har kapasitet 274\,Wh = 0{,}274\,kWh. Med 2 droner og 1 batteri per drone:
+Hvert batteri har kapasitet 274\,Wh = 0{,}274\,kWh. Med 1 drone og 1 batteri per drone:
 \[
-    E_{\text{bat,tot}} = 2 \times 0{,}274\,\text{kWh} = 0{,}548\,\text{kWh}
+    E_{\text{bat,tot}} = 1 \times 0{,}274\,\text{kWh} = 0{,}274\,\text{kWh}
 \]
 Produksjonsutslipp per batterisett:
 \[
-    U_{\text{bat,prod}} = 0{,}548\,\text{kWh} \times 80\,\frac{\text{kg CO}_2\text{eq}}{\text{kWh}} = 43{,}8\,\text{kg CO}_2\text{eq}
+    U_{\text{bat,prod}} = 0{,}274\,\text{kWh} \times 80\,\frac{\text{kg CO}_2\text{eq}}{\text{kWh}} = 21{,}9\,\text{kg CO}_2\text{eq}
 \]
 Amortisert over dronelevetid på 5 år:
 \[
-    U_{\text{bat,prod,år}} = \frac{43{,}8}{5} = \mathbf{8{,}8\,\text{kg CO}_2\text{eq/år}}
+    U_{\text{bat,prod,år}} = \frac{21{,}9}{5} = \mathbf{4{,}4\,\text{kg CO}_2\text{eq/år}}
 \]
 
 \paragraph{B2. Elektronikk og ramme (amortisert).}
-Droneramme + elektronikk: $2 \times 6{,}3\,\text{kg} = 12{,}6\,\text{kg}$.
+Droneramme + elektronikk: $1 \times 6{,}3\,\text{kg} = 6{,}3\,\text{kg}$.
 
 Materialsammensetningen for en drone av denne klassen er ikke entydig; det relevante intervallet ligger mellom to antagelser:
 
 \begin{itemize}
     \item \textit{Konservativ antagelse (ren elektronikk):} utslippsfaktor 12{,}5\,kg\,\ce{CO2eq}/kg \parencite{lca_battery_2021}
     \[
-        U_{\text{el,høy}} = 12{,}6\,\text{kg} \times 12{,}5 = 157{,}5\,\text{kg CO}_2\text{eq} \quad \Rightarrow \quad \frac{157{,}5}{5} = 31{,}5\,\text{kg CO}_2\text{eq/år}
+        U_{\text{el,høy}} = 6{,}3\,\text{kg} \times 12{,}5 = 78{,}75\,\text{kg CO}_2\text{eq} \quad \Rightarrow \quad \frac{78{,}75}{5} \approx 15{,}8\,\text{kg CO}_2\text{eq/år}
     \]
     \item \textit{Representativ antagelse (50\,\% elektronikk + 50\,\% resirkulert aluminium):} vektet faktor $= 0{,}5 \times 12{,}5 + 0{,}5 \times 0{,}3 = 6{,}4$\,kg\,\ce{CO2eq}/kg
     \[
-        U_{\text{el,lav}} = 12{,}6\,\text{kg} \times 6{,}4 = 80{,}6\,\text{kg CO}_2\text{eq} \quad \Rightarrow \quad \frac{80{,}6}{5} \approx \mathbf{16\,\text{kg CO}_2\text{eq/år}}
+        U_{\text{el,lav}} = 6{,}3\,\text{kg} \times 6{,}4 = 40{,}3\,\text{kg CO}_2\text{eq} \quad \Rightarrow \quad \frac{40{,}3}{5} \approx \mathbf{8{,}1\,\text{kg CO}_2\text{eq/år}}
     \]
 \end{itemize}
 
-Intervallet 16--32\,kg\,\ce{CO2eq}/år reflekterer den reelle usikkerheten i materialantagelsen. Hoveddelen og sumligningen nedenfor bruker \textbf{16\,kg\,\ce{CO2eq}/år} (representativ blandingsantagelse) som sentralt estimat, i tråd med at industrielle UAS-er i denne klassen har betydelig andel resirkulert aluminium i rammekonstruksjonen. Den konservative varianten (31,5\,kg) danner øvre grense i sensitivitetsvurderingen.
+Intervallet 8--16\,kg\,\ce{CO2eq}/år reflekterer den reelle usikkerheten i materialantagelsen. Hoveddelen og sumligningen nedenfor bruker \textbf{8\,kg\,\ce{CO2eq}/år} (representativ blandingsantagelse) som sentralt estimat, i tråd med at industrielle UAS-er i denne klassen har betydelig andel resirkulert aluminium i rammekonstruksjonen. Den konservative varianten (15,8\,kg) danner øvre grense i sensitivitetsvurderingen.
 
 \paragraph{B3. Dokkingstasjon (amortisert).}
 Produksjonsutslipp antatt 60\,kg\,\ce{CO2eq} (antagelse). Amortisert over 10 år:
@@ -172,9 +172,9 @@ Produksjonsutslipp antatt 60\,kg\,\ce{CO2eq} (antagelse). Amortisert over 10 år
 \subsection{Dronesystemet — driftsfasen}
 
 \paragraph{D1. Batteriutskiftning.}
-Batterier skiftes hvert 2. år per drone; gjennomsnittlig utskiftningsrate: 2 droner / 2 år = 1 batteri/år:
+Batterier skiftes hvert 2. år per drone; gjennomsnittlig utskiftningsrate: 1 drone / 2 år = 0{,}5 batteri/år:
 \[
-    U_{\text{bat,rep}} = 1 \times 0{,}274\,\text{kWh} \times 80\,\frac{\text{kg CO}_2\text{eq}}{\text{kWh}} = \mathbf{21{,}9\,\text{kg CO}_2\text{eq/år}}
+    U_{\text{bat,rep}} = 0{,}5 \times 0{,}274\,\text{kWh} \times 80\,\frac{\text{kg CO}_2\text{eq}}{\text{kWh}} = \mathbf{11{,}0\,\text{kg CO}_2\text{eq/år}}
 \]
 
 \paragraph{D2. Ladeenergi.}
@@ -182,19 +182,19 @@ Energiforbruk per inspeksjonsflygning:
 \[
     E_{\text{flyg}} = 90\,\text{W} \times 0{,}5\,\text{t} = 45\,\text{Wh} = 0{,}045\,\text{kWh}
 \]
-Totalt per år (52 flygninger, 2 droner):
+Totalt per år (52 flygninger, 1 drone):
 \[
-    E_{\text{år}} = 52 \times 2 \times 0{,}045\,\text{kWh} = 4{,}68\,\text{kWh/år}
+    E_{\text{år}} = 52 \times 1 \times 0{,}045\,\text{kWh} = 2{,}34\,\text{kWh/år}
 \]
 Klimagassutslipp fra ladeenergi:
 \[
-    U_{\text{lade}} = 4{,}68\,\text{kWh} \times 0{,}023\,\frac{\text{kg CO}_2\text{eq}}{\text{kWh}} = \mathbf{0{,}11\,\text{kg CO}_2\text{eq/år}} \approx <1
+    U_{\text{lade}} = 2{,}34\,\text{kWh} \times 0{,}015\,\frac{\text{kg CO}_2\text{eq}}{\text{kWh}} = \mathbf{0{,}04\,\text{kg CO}_2\text{eq/år}} \approx <1
 \]
 
 \paragraph{Sum dronesystem (sentralt estimat):}
 \[
     U_{\text{drone,tot}} = U_{\text{bat,prod,år}} + U_{\text{el,år}} + U_{\text{dok,år}} + U_{\text{bat,rep}} + U_{\text{lade}}
-    = 8{,}8 + 16 + 6{,}0 + 21{,}9 + 0{,}1 = \mathbf{52{,}8\,\text{kg CO}_2\text{eq/år}}
+    = 4{,}4 + 8{,}1 + 6{,}0 + 11{,}0 + 0{,}04 = \mathbf{29{,}5\,\text{kg CO}_2\text{eq/år}}
 \]
 
 \subsection{Referansesystemet — driftsfasen}
@@ -231,15 +231,15 @@ Ingeniørkontroll hvert 6. år (amortisert):
 
 Relativ reduksjon ved ekvivalent inspeksjonsfrekvens:
 \[
-    \Delta U = \frac{884 - 53}{884} \times 100\,\% \approx \mathbf{94\,\%}
+    \Delta U = \frac{884 - 30}{884} \times 100\,\% \approx \mathbf{97\,\%}
 \]
 Absolutt besparelse per objekt per år:
 \[
-    \Delta U_{\text{abs}} = 884 - 53 = 831\,\text{kg CO}_2\text{eq/år}
+    \Delta U_{\text{abs}} = 884 - 30 = 854\,\text{kg CO}_2\text{eq/år}
 \]
 Skalert til 500 kritiske jernbaneobjekter:
 \[
-    \Delta U_{\text{total}} = 500 \times 831\,\text{kg} \approx 415\,000\,\text{kg} \approx \mathbf{415\,\text{t CO}_2\text{eq/år}}
+    \Delta U_{\text{total}} = 500 \times 854\,\text{kg} \approx 427\,000\,\text{kg} \approx \mathbf{427\,\text{t CO}_2\text{eq/år}}
 \]
 
 \subsection{Sensitivitetsintervall}
@@ -254,8 +254,8 @@ Selv under den konservative antagelsen reduseres utslippene med over 90\,\% samm
         \toprule
         \textbf{Scenario} & \textbf{Dronesum (kg \ce{CO2eq}/år)} & \textbf{Reduksjon vs.\ ref.} \\
         \midrule
-        Sentralt (50\,\% elektronikk + 50\,\% aluminium) & 53 & 94\,\% \\
-        Konservativt (ren elektronikk)                                & 68 & 92\,\% \\
+        Sentralt (50\,\% elektronikk + 50\,\% aluminium) & 30 & 97\,\% \\
+        Konservativt (ren elektronikk)                                & 37 & 96\,\% \\
         \bottomrule
     \end{tabular}
 \end{table}
