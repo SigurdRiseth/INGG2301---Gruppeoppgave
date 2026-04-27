@@ -1,42 +1,17 @@
 \section{Problembeskrivelse}
-
-\begin{tcolorbox}[
-    colback=gray!10,
-    colframe=gray!50,
-    title=Problem/behov – krav fra oppgaveteksten
-]
-\textbf{Problem/behov}
-\begin{itemize}
-    \item Definer og beskriv problemet dere ønsker å løse. Hvem har problemet?
-    Hvordan løses dette i dag? Hva er samfunnsmessige ringvirkninger av problemet?
-    Hvor stort er problemet (f.eks.\ kan man si noe om hvor mange det berører)?
-    Består problemet av flere delproblem?
-    \item Basert på informasjon dere henter inn, lag et konsept for en teknologisk
-    løsning som har et kommersielt potensial. Løsningen skal henge sammen med
-    problemet dere tar utgangspunkt i. Løsningen trenger ikke å beskrives i detalj,
-    men jo mer informasjon man har på plass jo enklere vil det være å gjøre
-    beregninger senere.
-    \item Vurder om problemet er økende sett i lys av samfunnsmessige og
-    bærekraftsmessige utfordringer frem mot år 2030. Kan man si at konseptet deres
-    støtter nødvendig omstilling for å løse disse utfordringene?
-    \item Beskriv styrkene i gruppa som gjør dere godt egnet til å løse dette
-    problemet og til å utvikle konseptet.
-\end{itemize}
-\end{tcolorbox}
-
 \subsection{Problem og behov}
 
 Norges jernbaneinfrastruktur er under betydelig press. Det norske jernbanenettet omfatter om lag 4\,000 kilometer bane, over 2\,700 broer samt et stort antall tunneler og fjellskjæringer \parencite{jernbanedirektoratet_tall}. Mange av disse konstruksjonene er av høy alder og utsatt for kontinuerlig slitasje fra klima, frost og geologiske bevegelser. Det akkumulerte vedlikeholdsetterslepet er estimert til 127,8 milliarder kroner \parencite{banenor_infrastatus_2024}, og til tross for at 437 milliarder kroner er avsatt til jernbaneformål i Nasjonal transportplan (NTP) 2025--2036, vurderer bransjeaktører at dette ikke er tilstrekkelig til å ta inn etterslepet i planperioden \parencite{jernbanedirektoratet_ntp_2025}.
 
 Konsekvensene av utilstrekkelig vedlikehold er målbare. Feil på infrastrukturen sto for om lag 24 prosent av forsinkelsestimene og nærmere 44 prosent av innstilte persontog i andre tertial 2024 \parencite{jernbanedirektoratet_gjennomforingsplan_2025}. Sett over hele 2024 var om lag 34 prosent av persontogene forsinket eller innstilt \parencite{vg_tog_2025}, og Bane NORs punktlighetsmål på 90 prosent ble ikke nådd \parencite{banenor_punktlighet_2025}. Dette rammer arbeidspendlere, reisende og godstransport, og svekker tilliten til jernbanen som et pålitelig transportmiddel.
 
-\textit{Primærkundene} -- de som eier problemet -- er infrastrukturforvaltere med ansvar for drift og vedlikehold av jernbanen. I Norge er dette særlig Bane NOR SF. Sekundært berøres togoperatørene (Vy, SJ, GoAhead m.fl.), som er avhengige av infrastrukturens tilstand for å levere punktlige avganger, og i siste instans passasjerene og samfunnet for øvrig.
+De som eier problemet er infrastrukturforvaltere med ansvar for drift og vedlikehold av jernbanen. I Norge er dette særlig Bane NOR SF. Sekundært berøres togoperatørene (Vy, SJ, GoAhead m.fl.), som er avhengige av infrastrukturens tilstand for å levere punktlige avganger, og i siste instans passasjerene og samfunnet for øvrig.
 
 \subsubsection{Dagens praksis og dens begrensninger}
 
-Bane NOR opererer med to parallelle inspeksjonsspor for jernbanebroer: årlige driftskontroller med begrenset dokumentasjonskrav, og grundige ingeniørkontroller hvert sjette år (\cref{kontakt:traetten}). Menneskebetjente droner brukes allerede til bildedokumentasjon ved ingeniørkontroller av broer og høye fjellskjæringer, men krever at en operatør transporteres til stedet for hver gjennomgang (\cref{kontakt:traetten}). For spormåling benyttes i tillegg målevognen Roger 1000 (\cref{kontakt:lau}). Den største operative utfordringen er sportilgang: strenge sikkerhetsregler krever togfrie perioder, som presser inspeksjoner til nattarbeid og begrenser hva som faktisk gjennomføres innenfor et år (\cref{kontakt:traetten}). Den viktigste svakheten i dagens regime er imidlertid ikke datainnsamlingen, men dataanalysen -- innsamlede data sammenlignes fortsatt i stor grad manuelt mot grenseverdier, uten systematisk utnyttelse av historiske trender (\cref{kontakt:lau}).
+Bane NOR opererer med to parallelle inspeksjonsspor for jernbanebroer: årlige driftskontroller med begrenset dokumentasjonskrav, og grundige ingeniørkontroller hvert sjette år (\cref{kontakt:traetten}\footnote{Ved henvisninger til Del A referer vi til personer i kontaktloggen}). Menneskebetjente droner brukes til bildedokumentasjon ved ingeniørkontroller av broer og høye fjellskjæringer, men krever at en operatør transporteres til stedet for hver gjennomgang (\cref{kontakt:traetten}). For spormåling benyttes i tillegg målevognen Roger 1000 (\cref{kontakt:lau}). Den største operative utfordringen er sportilgang: strenge sikkerhetsregler krever togfrie perioder, som presser inspeksjoner til nattarbeid og begrenser hva som faktisk gjennomføres innenfor et år (\cref{kontakt:traetten}). Den viktigste svakheten i dagens regime er imidlertid ikke datainnsamlingen, men dataanalysen -- innsamlede data sammenlignes fortsatt i stor grad manuelt mot grenseverdier, uten systematisk utnyttelse av historiske trender (\cref{kontakt:lau}).
 
-Problemet kan dekomponeres i tre delproblem:
+Problemet med dagens inspeksjonspraksis kan dekomponeres i tre delproblem:
 
 \begin{enumerate}
     \item \textbf{Lav inspeksjonsfrekvens.} Inspeksjonsintervallet er fast, ikke tilstandsbasert, slik at tilstandsforringelse som oppstår mellom planlagte gjennomganger kan forbli uoppdaget. Eldre infrastruktur kan feile uten forvarsel (\cref{kontakt:traetten}).
@@ -48,7 +23,7 @@ Problemet kan dekomponeres i tre delproblem:
 
 Konseptet tar utgangspunkt i et konkret og dokumentert markedsbehov (\textit{market pull}), men muliggjøres av kommersielt tilgjengelig droneteknologi og moden AI-basert bildeanalyse som nå er klar for industriell anvendelse (\textit{technology push}). Kombinasjonen av disse to kreftene skaper et gunstig mulighetsvindu \parencite{torvatn_teknologiledelse_2024}.
 
-Det foreslåtte konseptet er et autonomt dronesystem for kontinuerlig tilstandsovervåking av kritiske infrastrukturobjekter langs jernbanen -- tunneler, broer og fjellskjæringer. Systemet består av autonome droner stasjonert i dedikerte dokkingstasjoner plassert permanent ved utvalgte objekter. Dronene utfører forhåndsdefinerte eller hendelsesstyrte inspeksjonsruter -- for eksempel etter kraftig nedbør, frostperioder eller registrerte trafikkavvik -- og samler inn bilde- og sensordata som analyseres over tid for å avdekke gradvise endringer i konstruksjonenes tilstand. En konseptuell illustrasjon av systemet i operasjon er vist i \cref{fig:drone_concept}, mens den overordnede systemarkitekturen er vist i \cref{fig:system_overview}.
+Det foreslåtte konseptet er et autonomt dronesystem for kontinuerlig tilstandsovervåking av kritiske infrastrukturobjekter langs jernbanen -- tunneler, broer og fjellskjæringer. Systemet består av autonome droner stasjonert i dedikerte dokkingstasjoner plassert permanent ved utvalgte objekter. Dronene utfører forhåndsdefinerte eller hendelsesstyrte inspeksjonsruter -- for eksempel etter kraftig nedbør, skred eller registrerte trafikkavvik -- og samler inn bilde- og sensordata som analyseres over tid for å avdekke gradvise endringer i konstruksjonenes tilstand. En konseptuell illustrasjon av systemet i operasjon er vist i \cref{fig:drone_concept}, mens den overordnede systemarkitekturen er vist i \cref{fig:system_overview}.
 
 \begin{figure}[ht]
     \centering
@@ -56,6 +31,8 @@ Det foreslåtte konseptet er et autonomt dronesystem for kontinuerlig tilstandso
     \caption{Konseptuell illustrasjon av det autonome dronesystemet i operasjon over en jernbanebro. Dronen letter fra sin permanente dokkingstasjon, følger en forhåndsdefinert inspeksjonsrute og samler inn bilde- og sensordata (oransje kameraavtrykk) som overføres til en skyplattform for analyse.}
     \label{fig:drone_concept}
 \end{figure}
+
+% Konseptet samsvarer med nasjonale føringer. Regjeringen omtaler i Meld. St. 15 (2024–2025) såkalte drone-i-boks-løsninger som systemer hvor droner opererer autonomt fra permanente dokkingstasjoner, med anvendelser innen beredskap, overvåking og datainnsamling i områder med krevende geografi og begrenset infrastruktur \parencite{samferdselsdepartementet_droner_2025}.
 
 \begin{figure}[ht]
     \centering
@@ -66,11 +43,11 @@ Det foreslåtte konseptet er et autonomt dronesystem for kontinuerlig tilstandso
 
 Konseptet har tydelige paralleller til pågående initiativ internasjonalt. I Spania har luftfartsmyndigheten AESA gitt selskapet Ineco tillatelse til å benytte autonome droner i dokkingstasjoner til jernbaneinspeksjon \parencite{railwaygazette_spain_2024}. Den internasjonale jernbaneunionen (UIC) driver prosjektet Drone4Rail, som i samarbeid med EASA utvikler et regulatorisk rammeverk for langdistanse BVLOS-inspeksjon av jernbane \parencite{uic_drone4rail_2024}. EU-prosjektet RADIUS (Railway Digitalisation Using Drones) har videre utarbeidet konsepter for droneintegrerte dokkingstasjoner og trafikkstyring \parencite{euspa_radius_2024}. I Norden gjennomførte EU-prosjektet Drones4Safety verdens første vellykkede landing og lading av en autonom drone på en høyspentlinje, demonstrert ved Aarhus Letbane i 2022. Prosjektet estimerer et besparelsespotensial på €15 mrd. årlig for europeisk transportinfrastruktur ved full kommersialisering (\cref{kontakt:ebeid}).
 
-Også i Norge er behovet empirisk bekreftet. Bane NOR omtaler automatisert tilstandsovervåking internt som «vegen videre for jernbanen», og et konkret prosjekt med autonom dronestasjon på Meråkerbanen i Trøndelag er planlagt igangsatt 2026--2027 med midler allerede bevilget (\cref{kontakt:traetten}). Nordic Unmanned, en norsk droneoperatør, drifter allerede syv permanente drone-i-boks-systemer for kritisk infrastruktur i Belgia og Finnmark og gjennomførte om lag 2\,500 flyvninger i 2025 (\cref{kontakt:wike}). Disse initiativene bekrefter at det teknologiske og regulatoriske grunnlaget for konseptet er i ferd med å modnes, og at norsk jernbane er godt posisjonert for tidlig adopsjon.
+Også i Norge er behovet empirisk bekreftet. Bane NOR omtaler automatisert tilstandsovervåking internt som «vegen videre for jernbanen», og et konkret prosjekt med autonom dronestasjon på Meråkerbanen i Trøndelag er planlagt igangsatt 2026--2027 med midler allerede bevilget (\cref{kontakt:traetten} Nordic Unmanned, en norsk droneoperatør, drifter allerede syv permanente drone-i-boks-systemer for kritisk infrastruktur i Belgia og Finnmark og gjennomførte om lag 2\,500 flyvninger i 2025 (\cref{kontakt:wike}). Disse initiativene bekrefter at det teknologiske og regulatoriske grunnlaget for konseptet er i ferd med å modnes, og at norsk jernbane er godt posisjonert for tidlig adopsjon.
 
-Innovasjonsmessig er konseptet primært en \textit{inkrementell innovasjon}: droner og jernbaneinspeksjon eksisterer begge som separate fenomener, og løsningen kombinerer disse på en ny måte. Konseptet har likevel et element av \textit{disruptiv innovasjon} ved at det retter seg mot et kundesegment -- behovet for kontinuerlig, hendelsesstyrt tilstandsovervåking -- som dagens aktører ikke betjener \parencite[]{torvatn_teknologiledelse_2024}.
+Innovasjonsfaglig sett er konseptet primært en \textit{inkrementell innovasjon}: droner og jernbaneinspeksjon eksisterer begge som separate fenomener, og løsningen kombinerer disse på en ny måte. Konseptet har likevel et element av \textit{disruptiv innovasjon} ved at det retter seg mot et kundesegment -- behovet for kontinuerlig, hendelsesstyrt tilstandsovervåking -- som dagens aktører ikke betjener \parencite[]{torvatn_teknologiledelse_2024}.
 
-Konseptets verdiforslag kan formuleres slik: [PRODUKTNAVN] hjelper infrastrukturforvaltere som Bane NOR, som i dag mangler kontinuerlig og kostnadseffektiv tilstandsovervåking av kritiske jernbanestrukturer, til å gå fra reaktivt til prediktivt vedlikehold -- uten at inspeksjonspersonell trenger å oppholde seg i spor eller på høye konstruksjoner.
+Konseptets verdiforslag kan formuleres slik: produktet hjelper infrastrukturforvaltere som Bane NOR, som i dag mangler kontinuerlig og kostnadseffektiv tilstandsovervåking av kritiske jernbanestrukturer, til å gå fra reaktivt til prediktivt vedlikehold -- uten at inspeksjonspersonell trenger å oppholde seg i spor eller på høye konstruksjoner.
 
 \subsection{Problemets utvikling mot 2030}
 
@@ -82,11 +59,11 @@ Prosjektgruppen består av fem tredjårsstudenter i ingeniørutdanning ved NTNU:
 
 Gjennom faglige og personlige nettverk har gruppen tilgang til kontakter med erfaring fra kollektivtransport og jernbanerelatert virksomhet, blant annet fra Sporveien, og NTNU-miljøet rundt jernbane og autonome systemer. Dette åpner for kvalitative intervjuer med fagpersoner som besitter innsikt i operative utfordringer, sikkerhetskrav og praktiske rammebetingelser for inspeksjon og vedlikehold -- noe som vil styrke det empiriske grunnlaget for prosjektet.
 
-Gruppen er bevisst på at videre kommersialisering vil kreve kompetanse som gruppen foreløpig ikke besitter: primært innen flysertifisering og BVLOS-regulering, jernbanespesifikke HMS-krav og kommersiell anskaffelsesprosess mot offentlig sektor. For å dekke disse kompetansegapene vil gruppen arbeide systematisk med å identifisere samarbeidspartnere, herunder norske droneselskaper med erfaring fra BVLOS-operasjoner, juridiske rådgivere innen luftfartsrett og eventuelle industripartnere med erfaring fra Bane NOR-prosjekter. En slik partnerstruktur er i tråd med anbefalinger fra faglitteraturen om at teknologioppstartsselskaper bør kompensere for manglende bransjekunnskap gjennom strategiske allianser \parencite[84]{torvatn_teknologiledelse_2024}.
+Gruppen er bevisst på at videre kommersialisering vil kreve kompetanse som gruppen foreløpig ikke besitter: primært innen flysertifisering og BVLOS-regulering\footnote{BVLOS er droneoperasjoner der piloten ikke har direkte visuell kontakt med dronen.}, jernbanespesifikke HMS-krav og kommersiell anskaffelsesprosess mot offentlig sektor. For å dekke disse kompetansegapene vil gruppen arbeide systematisk med å identifisere samarbeidspartnere, herunder norske droneselskaper med erfaring fra BVLOS-operasjoner, juridiske rådgivere innen luftfartsrett og eventuelle industripartnere med erfaring fra Bane NOR-prosjekter. En slik partnerstruktur er i tråd med anbefalinger fra faglitteraturen om at teknologioppstartsselskaper bør kompensere for manglende bransjekunnskap gjennom strategiske allianser \parencite{torvatn_teknologiledelse_2024}.
 
 \subsection{Grunnhypoteser}
 
-I tråd med \textcite[57]{torvatn_teknologiledelse_2024} etableres følgende
+I tråd med \textcite{torvatn_teknologiledelse_2024} etableres følgende
 grunnhypoteser som utgangspunkt for mulighetsstudiet:
 
 \begin{enumerate}
@@ -94,11 +71,11 @@ grunnhypoteser som utgangspunkt for mulighetsstudiet:
 
     \item \textbf{Kunde.} Primærkunden er infrastrukturforvaltere med ansvar for drift og vedlikehold av jernbane -- i første omgang Bane NOR SF i det norske markedet, med potensial for skalering til øvrige europeiske jernbaneforvaltere.
 
-    \item \textbf{Betalingsvilje.} Kunden vil kjøpe løsningen fordi den reduserer kostnader knyttet til reaktivt vedlikehold og driftsavbrudd, forbedrer HMS for inspeksjonspersonell og gir et bedre og mer kontinuerlig beslutningsgrunnlag for prioritering av vedlikeholdstiltak. Betalingsvilje er empirisk bekreftet: Bane NOR har allerede bevilget midler til et droneovervåkingsprosjekt på Meråkerbanen (\cref{kontakt:traetten}), og ifølge Albert Lau ved NTNU er slik vilje til stede i bransjen, men forutsetter dokumentert effekt -- gjerne med referanser fra andre europeiske land (\cref{kontakt:lau}).
+    \item \textbf{Betalingsvilje.} Kunden vil kjøpe løsningen fordi den reduserer kostnader knyttet til reaktivt vedlikehold og driftsavbrudd, forbedrer HMS for inspeksjonspersonell og gir et bedre og mer kontinuerlig beslutningsgrunnlag for prioritering av vedlikeholdstiltak. Betalingsvilje er empirisk bekreftet: Bane NOR har allerede bevilget midler til et droneovervåkingsprosjekt på Meråkerbanen (\cref{kontakt:traetten}), og ifølge Førsteamanuensis ved NTNU, Albert Lau, er slik vilje til stede i bransjen, men forutsetter dokumentert effekt -- gjerne med referanser fra andre europeiske land (\cref{kontakt:lau}).
 
-    \item \textbf{Differensiering.} Løsningen skiller seg fra dagens operatørstyrte droner ved å være permanent stasjonert ved spesifikke kritiske objekter og ved å kombinere hendelsesstyrt inspeksjon med longitudinell dataanalyse. Dette muliggjør tidlig varsling og prediktivt vedlikehold -- noe dagens periodiske, transportbaserte inspeksjonsmetoder ikke kan tilby.
+    \item \textbf{Differensiering.} Løsningen skiller seg fra dagens operatørstyrte droner ved å være permanent stasjonert ved spesifikke kritiske objekter og ved å kombinere hendelsesstyrt inspeksjon med kontinuerlig dataanalyse. Dette muliggjør tidlig varsling og prediktivt vedlikehold -- noe dagens periodiske, transportbaserte inspeksjonsmetoder ikke kan tilby.
 
-    \item \textbf{Markedsvindu.} Det er en unik mulighet i markedet fordi jernbanesektoren globalt er midt i en digitaliseringsbølge, det europeiske regulatoriske rammeverket for BVLOS-operasjoner er i ferd med å modnes, og norsk jernbane har et akutt og erkjent behov for mer effektiv infrastrukturforvaltning -- kombinert med politisk prioritering av vedlikehold i NTP 2025--2036. Ifølge Albert Lau ved NTNU er de organisatoriske og regulatoriske barrierene større enn de tekniske (\cref{kontakt:lau}), noe som gir et fortrinn for aktører som posisjonerer seg tidlig i samarbeid med Bane NOR.
+    \item \textbf{Markedsvindu.} Det er en unik mulighet i markedet da jernbanesektoren globalt er midt i en digitaliseringsbølge, det europeiske regulatoriske rammeverket for BVLOS-operasjoner er i ferd med å modnes, og norsk jernbane har et akutt og erkjent behov for mer effektiv infrastrukturforvaltning -- kombinert med politisk prioritering av vedlikehold i NTP 2025--2036. Ifølge Albert Lau er de organisatoriske og regulatoriske barrierene større enn de tekniske (\cref{kontakt:lau}), noe som gir et fortrinn for aktører som posisjonerer seg tidlig i samarbeid med Bane NOR.
 \end{enumerate}
 
 Som et innledende rammeverk for de videre analysene presenteres i \cref{tab:pestel} en PESTEL-analyse av konseptet.

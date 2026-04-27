@@ -91,11 +91,11 @@ I teknologimatrisa $\mathbf{A}$ representerer positive diagonale elementer en pr
 
 \subsection{Antagelser og parametere}
 
-\begin{table}[ht]
+\begin{table}[htbp]
     \centering
     \caption{Oversikt over alle parametere og antagelser benyttet i LCA-beregningene.}
     \label{tab:antagelser}
-    \begin{tabular}{p{5.5cm} r l p{4.5cm}}
+    \begin{tabular}{p{5cm} r l p{4cm}}
         \toprule
         \textbf{Parameter} & \textbf{Verdi} & \textbf{Enhet} & \textbf{Kilde / begrunnelse} \\
         \midrule
@@ -244,7 +244,9 @@ Skalert til 500 kritiske jernbaneobjekter:
 
 \subsection{Sensitivitetsintervall}
 
-\begin{table}[ht]
+Selv under den konservative antagelsen reduseres utslippene med over 90\,\% sammenlignet med tilsvarende manuell inspeksjonsfrekvens. Hovedkonklusjonen er robust overfor denne usikkerheten.
+
+\begin{table}[htbp]
     \centering
     \caption{Sensitivitetsanalyse for dronesystemets totale utslipp under ulike antagelser om materialsammensetning (B2).}
     \label{tab:sensitivitet}
@@ -252,10 +254,8 @@ Skalert til 500 kritiske jernbaneobjekter:
         \toprule
         \textbf{Scenario} & \textbf{Dronesum (kg \ce{CO2eq}/år)} & \textbf{Reduksjon vs.\ ref.} \\
         \midrule
-        Sentralt (50\,\% elektronikk + 50\,\% resirkulert aluminium) & 53 & 94\,\% \\
+        Sentralt (50\,\% elektronikk + 50\,\% aluminium) & 53 & 94\,\% \\
         Konservativt (ren elektronikk)                                & 68 & 92\,\% \\
         \bottomrule
     \end{tabular}
 \end{table}
-
-Selv under den konservative antagelsen reduseres utslippene med over 90\,\% sammenlignet med tilsvarende manuell inspeksjonsfrekvens. Hovedkonklusjonen er robust overfor denne usikkerheten.
